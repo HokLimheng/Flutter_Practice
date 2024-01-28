@@ -19,31 +19,31 @@ class RestaurantCard extends StatelessWidget {
 
 
     return InkWell(
-      // onLongPress: (){
-      //   showModalBottomSheet(
-      //       context: context,
-      //       builder: (context){
-      //         return Container(
-      //           width: double.infinity,
-      //           height: 150,
-      //           color: Colors.pinkAccent.shade100,
-      //           child: Column(
-      //             children: [
-      //               const Text('Are you sure to remove this Restaurant?',
-      //               style: TextStyle(
-      //                   fontWeight: FontWeight.bold,
-      //                   fontSize: 20),
-      //               ),
-      //               TextButton(onPressed: (){
-      //                 // restaurantViewModel.deleteRestaurant(restaurant!.id);
-      //               }, child: const Text('Yes')),
-      //               TextButton(onPressed: (){}, child: const Text('No')),
-      //             ],
-      //           ),
-      //         );
-      //       },
-      //   );
-      // },
+      onLongPress: (){
+        showModalBottomSheet(
+            context: context,
+            builder: (context){
+              return Container(
+                width: double.infinity,
+                height: 150,
+                color: Colors.pinkAccent.shade100,
+                child: Column(
+                  children: [
+                    const Text('Are you sure to remove this Restaurant?',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
+                    ),
+                    TextButton(onPressed: (){
+                      // restaurantViewModel.deleteRestaurant(restaurant!.id);
+                    }, child: const Text('Yes')),
+                    TextButton(onPressed: (){}, child: const Text('No')),
+                  ],
+                ),
+              );
+            },
+        );
+      },
 
       onTap: (){
         Navigator.push(context, MaterialPageRoute(

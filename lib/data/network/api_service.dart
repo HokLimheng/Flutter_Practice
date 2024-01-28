@@ -5,20 +5,20 @@ import 'package:http/http.dart' as http;
 
 class ApiService {
 
-  // Future<dynamic> deleteRestaurant(url) async {
-  //
-  //   var request = http.Request('DELETE', Uri.parse(url));
-  //
-  //   var response = await request.send();
-  //
-  //   if (response.statusCode == 200) {
-  //     return true;
-  //     // print(await response.stream.bytesToString());
-  //   } else {
-  //     return false;
-  //     // print(response.reasonPhrase);
-  //   }
-  // }
+  Future<dynamic> deleteRestaurant(url) async {
+
+    var request = http.Request('DELETE', Uri.parse(url));
+
+    var response = await request.send();
+
+    if (response.statusCode == 200) {
+      return true;
+      // print(await response.stream.bytesToString());
+    } else {
+      return false;
+      // print(response.reasonPhrase);
+    }
+  }
 
 
   Future<dynamic> postRestaurant(url, data, bool isUpdate) async {

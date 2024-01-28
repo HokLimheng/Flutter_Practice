@@ -24,8 +24,8 @@ class RestaurantRepository {
     }
   }
 
-  // Future<dynamic> deleteRestaurant(id) async{
-  //   dynamic response = await apiService.deleteRestaurant('${AppUrl.postRestaurant}/$id');
-  //   return response;
-  // }
+  Future<dynamic> deleteRestaurant(id) async{
+    dynamic response = await apiService.deleteRestaurant('${AppUrl.postRestaurant}/$id');
+    return response;
+  }
 }
